@@ -22,14 +22,15 @@ router.use(function timeLogStart(req, res, next) {
 });
 
 router.post('/air-shopping', function (req, res, next) {
-    var options = {
-        method: 'POST',
-        url: 'http://iata.api.mashery.com/athena/ndc162api',
-        headers: {
-           'authorization-key': 'cwet46xetc7mshtexchnthrb',
-           'content-type': 'application/xml'
-        },
-        body: '<?xml version="1.0" encoding="UTF-8"?>\r\n<AirShoppingRQ EchoToken="feb37ad3-7314-48eb-bfa7-8a67da233271" Version="IATA2016.2" xmlns="http://www.iata.org/IATA/EDIST">\r\n\t<Document>\r\n\t\t<ReferenceVersion>1.0</ReferenceVersion>\r\n\t</Document>\r\n\t<Party>\r\n\t\t<Sender>\r\n\t\t\t<TravelAgencySender>\r\n\t\t\t\t<Name>JR TECHNOLOGIES</Name>\r\n\t\t\t\t<IATA_Number>20200154</IATA_Number>\r\n\t\t\t\t<AgencyID>00010080</AgencyID>\r\n\t\t\t</TravelAgencySender>\r\n\t\t</Sender>\r\n\t\t<Recipient>\r\n\t\t\t<ORA_Recipient>\r\n\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t</ORA_Recipient>\r\n\t\t</Recipient>\r\n\t</Party>\r\n\t<Travelers>\r\n\t\t<Traveler>\r\n\t\t\t<AnonymousTraveler>\r\n\t\t\t\t<PTC Quantity="1">ADT</PTC>\r\n\t\t\t</AnonymousTraveler>\r\n\t\t\t<AnonymousTraveler>\r\n\t\t\t\t<PTC Quantity="1">CHD</PTC>\r\n\t\t\t</AnonymousTraveler>\r\n\t\t</Traveler>\r\n\t</Travelers>\r\n\t<CoreQuery>\r\n\t\t<OriginDestinations>\r\n\t\t\t<OriginDestination>\r\n\t\t\t\t<Departure>\r\n\t\t\t\t\t<AirportCode>LHR</AirportCode>\r\n\t\t\t\t\t<Date>2017-11-29</Date>\r\n\t\t\t\t</Departure>\r\n\t\t\t\t<Arrival>\r\n\t\t\t\t\t<AirportCode>BCN</AirportCode>\r\n\t\t\t\t</Arrival>\r\n\t\t\t\t<MarketingCarrierAirline>\r\n\t\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t\t\t<Name>Kronos</Name>\r\n\t\t\t\t</MarketingCarrierAirline>\r\n\t\t\t</OriginDestination>\r\n\t\t</OriginDestinations>\r\n\t</CoreQuery>\r\n\t<Preference>\r\n\t\t<AirlinePreferences>\r\n\t\t\t<Airline>\r\n\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t</Airline>\r\n\t\t</AirlinePreferences>\r\n\t</Preference>\r\n</AirShoppingRQ>' };
+
+    var options = { method: 'POST',
+    url: 'http://iata.api.mashery.com/athena/ndc162api',
+    headers:
+     { 'postman-token': '0eaf5470-431a-0a77-6931-9cc3fe8f4e1a',
+       'cache-control': 'no-cache',
+       'authorization-key': 'cwet46xetc7mshtexchnthrb',
+       'content-type': 'application/xml' },
+    body: '<?xml version="1.0" encoding="UTF-8"?>\r\n<AirShoppingRQ EchoToken="bfbcc7e2-2a4b-4af3-be00-e0bbd965a8ac" Version="IATA2016.2" xmlns="http://www.iata.org/IATA/EDIST">\r\n\t<Document>\r\n\t\t<ReferenceVersion>1.0</ReferenceVersion>\r\n\t</Document>\r\n\t<Party>\r\n\t\t<Sender>\r\n\t\t\t<TravelAgencySender>\r\n\t\t\t\t<Name>JR TECHNOLOGIES</Name>\r\n\t\t\t\t<IATA_Number>20200154</IATA_Number>\r\n\t\t\t\t<AgencyID>00010080</AgencyID>\r\n\t\t\t</TravelAgencySender>\r\n\t\t</Sender>\r\n\t\t<Recipient>\r\n\t\t\t<ORA_Recipient>\r\n\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t</ORA_Recipient>\r\n\t\t</Recipient>\r\n\t</Party>\r\n\t<Travelers>\r\n\t\t<Traveler>\r\n\t\t\t<AnonymousTraveler>\r\n\t\t\t\t<PTC Quantity="1">ADT</PTC>\r\n\t\t\t</AnonymousTraveler>\r\n\t\t\t<AnonymousTraveler>\r\n\t\t\t\t<PTC Quantity="1">CHD</PTC>\r\n\t\t\t</AnonymousTraveler>\r\n\t\t</Traveler>\r\n\t</Travelers>\r\n\t<CoreQuery>\r\n\t\t<OriginDestinations>\r\n\t\t\t<OriginDestination>\r\n\t\t\t\t<Departure>\r\n\t\t\t\t\t<AirportCode>LHR</AirportCode>\r\n\t\t\t\t\t<Date>2017-11-29</Date>\r\n\t\t\t\t</Departure>\r\n\t\t\t\t<Arrival>\r\n\t\t\t\t\t<AirportCode>BCN</AirportCode>\r\n\t\t\t\t</Arrival>\r\n\t\t\t\t<MarketingCarrierAirline>\r\n\t\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t\t\t<Name>Kronos</Name>\r\n\t\t\t\t</MarketingCarrierAirline>\r\n\t\t\t</OriginDestination>\r\n\t\t</OriginDestinations>\r\n\t</CoreQuery>\r\n\t<Preference>\r\n\t\t<AirlinePreferences>\r\n\t\t\t<Airline>\r\n\t\t\t\t<AirlineID>C9</AirlineID>\r\n\t\t\t</Airline>\r\n\t\t</AirlinePreferences>\r\n\t</Preference>\r\n</AirShoppingRQ>' };
 
     request(options, function (error, response, body) {
       if (error) throw new Error(error);
@@ -42,7 +43,7 @@ router.post('/air-shopping', function (req, res, next) {
 
 router.post('/order', function (req, res, next) {
     console.log(req.params)
-    const responseId = '201-fa1ad987c749498a8e4a66ec96c81c6b';
+    const responseId = '201-7066ed733b69403abeb2715599485538';
 
     var options = {
       method: 'POST',
