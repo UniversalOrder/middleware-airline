@@ -1,0 +1,24 @@
+{
+  "name": "middlewareorder",
+  "version": "1.0.0",
+  "description": "Middleware order",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Wagner Nicolas",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "should": "^8.3.0",
+    "xml2js": "^0.4.17",
+    "web3": "^0.20.1"
+  },
+  "devDependencies": {
+    "async": "^2.0.0-rc.2",
+    "mocha": "^2.4.5",
+    "request": "^2.69.0"
+  }
+}

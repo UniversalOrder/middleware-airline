@@ -1,0 +1,5 @@
+var URL_API_IATA = 'http://iata.api.mashery.com/athena/ndc162api'
+var PRIVATE_KEY_AIRLINE = '0x36d85Dc3683156e63Bf880A9fAb7788CF8143a27'
+
+exports.URL_API_IATA = URL_API_IATA
+exports.PRIVATE_KEY_AIRLINE = PRIVATE_KEY_AIRLINE
